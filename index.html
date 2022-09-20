@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header><h1>Weather Dashboard</h1></header>
+    <div class="container">
+        <h1 id="city">
+            <!-- selected city name -->
+        </h1>
+        <h2 id="temperature">
+            <!-- current temp will display here -->
+        </h2>
+        <p id="humidity">
+            <!-- humidity display here -->
+        </p>
+        <p id="wind">
+            <!-- wind speed display -->
+        </p>
+        <p id="index">
+            <!-- uv index display -->
+        </p>
+        <form id="form">
+            <input id="city-input" type="text" placeholder="search" title="Please enter a city" pattern="^[a-zA-Z',.\s-]{1,25}$">
+            <button id="search" type="submit">Search</button>
+        </form>
+    </div>
+    <section>
+        <div class="container">
+            <ul class="cities"></ul>
+        </div>
+    </section>
+
+    <!-- <script type="module">
+ 
+    </script> -->
+
+</body>
+<script src="./js/script.js"></script>
+</html>
