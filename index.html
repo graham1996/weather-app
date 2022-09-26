@@ -1,45 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
+
 <body>
-    <header><h1>Weather Dashboard</h1></header>
-    <div class="container">
-        <h1 id="city">
-            <!-- selected city name -->
-        </h1>
-        <h2 id="temperature">
-            <!-- current temp will display here -->
-        </h2>
-        <p id="humidity">
-            <!-- humidity display here -->
-        </p>
-        <p id="wind">
-            <!-- wind speed display -->
-        </p>
-        <p id="index">
-            <!-- uv index display -->
-        </p>
-        <form id="form">
-            <input id="city-input" type="text" placeholder="search" title="Please enter a city" pattern="^[a-zA-Z',.\s-]{1,25}$">
-            <button id="search" type="submit">Search</button>
-        </form>
+    <header class="header">
+        <h1>Weather Dashboard</h1>
+    </header>
+    <!-- need to figure out js for getting dates to show -->
+    <div class="card" id="current" style="width: 18rem;">
+        <div class="card-body">
+            <h1 class="card-title" id="city">
+                <!-- selected city name -->
+            </h1>
+            <h2 class="card-text" id="temperature">
+                <!-- current temp will display here -->
+            </h2>
+            <p class="card-text text-center" id="humidity">
+                <!-- humidity display here -->
+            </p>
+            <p class="card-text text-center" id="wind">
+                <!-- wind speed display -->
+            </p>
+            <p class="card-text text-center" id="index">
+                <!-- uv index display -->
+            </p>
+
+        </div>
     </div>
-    <section>
-        <div class="container">
+        <!-- trying to figure out how to hide containers until populate after search -->
+
+        <!-- <script>
+            const targetSect = document.getElementById("hide");
+            const btn = document.getElementById("search");
+            btn.onclick = function () {
+              if (targetSect.style.display !== "none") {
+                targetSect.style.display = "none";
+              } else {
+                targetSect.style.display = "block";
+              }
+            };
+          </script> -->
+    
+    <form id="form">
+        <input id="city-input" type="text" placeholder="enter a city" title="Please enter a city"
+            pattern="^[a-zA-Z',.\s-]{1,25}$">
+        <button id="search" type="submit">Search</button>
+    </form>
+    <!-- 5 day forecast -->
+
+    <section class="container">
+        <div class="grid-container ">
+        <div class="card grid-child">
+        <div class="fiveday1">
+            <h2 id="temperature1">
+                <!-- temp will display here -->
+            </h2>
+            <p id="humidity1">
+                <!-- humidity display here -->
+            </p>
+            <p id="wind1">
+                <!-- wind speed display -->
+            </p>
+            <p id="index1">
+                <!-- uv index display -->
+            </p>
+        </div>
+    </div>
+    <div class="card grid-child">
+        <div class="fiveday2">
+            <h2 id="temperature2">
+                <!-- temp will display here -->
+            </h2>
+            <p id="humidity2">
+                <!-- humidity display here -->
+            </p>
+            <p id="wind2">
+                <!-- wind speed display -->
+            </p>
+            <p id="index2">
+                <!-- uv index display -->
+            </p>
+        </div>
+    </div>
+    <div class="card grid-child">
+        <div class="fiveday3">
+            <h2 id="temperature3">
+                <!-- temp will display here -->
+            </h2>
+            <p id="humidity3">
+                <!-- humidity display here -->
+            </p>
+            <p id="wind3">
+                <!-- wind speed display -->
+            </p>
+            <p id="index3">
+                <!-- uv index display -->
+            </p>
+        </div>
+    </div>
+    <div class="card grid-child">
+        <div class="fiveday4">
+            <h2 id="temperature4">
+                <!-- temp will display here -->
+            </h2>
+            <p id="humidity4">
+                <!-- humidity display here -->
+            </p>
+            <p id="wind4">
+                <!-- wind speed display -->
+            </p>
+            <p id="index4">
+                <!-- uv index display -->
+            </p>
+        </div>
+    </div>
+    <div class="card grid-child">
+        <div class="fiveday5">
+            <h2 id="temperature5">
+                <!-- temp will display here -->
+            </h2>
+            <p id="humidity5">
+                <!-- humidity display here -->
+            </p>
+            <p id="wind5">
+                <!-- wind speed display -->
+            </p>
+            <p id="index5">
+                <!-- uv index display -->
+            </p>
+        </div>
+    </div>
+</div>
+    </section>
+    <section class="previously-searched">
+        <div class="container" id="city-sidebar">
             <ul class="cities"></ul>
         </div>
     </section>
 
-    <!-- <script type="module">
- 
-    </script> -->
-
 </body>
 <script src="./js/script.js"></script>
+
 </html>
