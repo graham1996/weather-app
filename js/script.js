@@ -136,7 +136,7 @@ formEl.addEventListener('submit', (e) => {
 
 
 function getLatAndLong(cityName) {
-    const apiCall = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=974cc7bb4538b64b64af9976e8b80e9e`;
+    const apiCall = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=974cc7bb4538b64b64af9976e8b80e9e`;
 
     fetch(apiCall)
         .then(res => res.json())
