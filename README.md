@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 06 Server-Side APIs: Weather Dashboard
 
 ## Your Task
@@ -98,3 +99,16 @@ You are required to submit BOTH of the following for review:
 
 - - -
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+=======
+# weather-app
+
+## Description
+This project uses Openweathermap.org API to show the weather for any given city. Simply type the city you wish to search into the iput box and the API will then return your data.
+This project is currently under construction and therefore is not too pretty, but will give you all of the info you need.
+
+## Installation
+This project does not require any installation, simply search for the city you wish to check the weather conditions of and you are all set.
+
+## Contribution 
+Graham Johnson
+>>>>>>> 3c7b01c138f87ca6f8758dbbe576c925b8adc202
